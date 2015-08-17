@@ -1,0 +1,120 @@
+## soundpanel.spec.in
+##
+##    Copyright (C) 2002-2006  Fred Gleason <fredg@paravelsystems.com>
+##
+##    This program is free software; you can redistribute it and/or modify
+##    it under the terms of version 2 of the GNU General Public License as
+##    published by the Free Software Foundation;
+##
+##    This program is distributed in the hope that it will be useful,
+##    but WITHOUT ANY WARRANTY; without even the implied warranty of
+##    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##    GNU General Public License for more details.
+##
+##    You should have received a copy of the GNU General Public License
+##    along with this program; if not, write to the Free Software
+##    Foundation, Inc., 59 Temple Place, Suite 330, 
+##    Boston, MA  02111-1307  USA
+##
+
+Summary: Audio cart wall utility
+Name: soundpanel
+Version: @VERSION@
+Release: @RPM_RELEASE@
+License: GPL
+Group: Productivity/Multimedia/Sound/Players
+Source: ftp://ftp.salemradiolabs.com/pub/srlabs/soundpanel/soundpanel-@VERSION@.tar.gz
+Requires: sox cdparanoia cdda2wav
+BuildRoot: /var/tmp/soundpanel-@VERSION@
+
+%description
+SoundPanel is an audio cart wall system targeted for use in professional 
+broadcasting and live performance environments.  It features the ability to 
+swiftly select and play an audio cut out of a potential selection of hundreds,
+while also offering features to assist in the creation and maintenance of 
+audio recordings.
+
+%prep
+%setup
+./configure --prefix=@LOCAL_PREFIX@
+
+%build
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+mkdir -p $RPM_BUILD_ROOT@LOCAL_PREFIX@/bin
+cp soundpanel $RPM_BUILD_ROOT@LOCAL_PREFIX@/bin/
+mkdir -p $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/icons/hicolor/16x16/apps
+cp soundpanel-16x16.xpm $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/icons/hicolor/16x16/apps/soundpanel.xpm
+mkdir -p $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/icons/hicolor/22x22/apps
+cp soundpanel-22x22.xpm $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/icons/hicolor/22x22/apps/soundpanel.xpm
+mkdir -p $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/icons/hicolor/32x32/apps
+cp soundpanel-32x32.xpm $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/icons/hicolor/32x32/apps/soundpanel.xpm
+mkdir -p $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/icons/hicolor/48x48/apps
+cp soundpanel-48x48.xpm $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/icons/hicolor/48x48/apps/soundpanel.xpm
+mkdir -p $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/X11/fvwm2/pixmaps
+cp soundpanel-16x16.xpm $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/X11/fvwm2/pixmaps/mini.soundpanel.xpm
+cp soundpanel-32x32.xpm $RPM_BUILD_ROOT@LOCAL_PREFIX@/share/X11/fvwm2/pixmaps/soundpanel.xpm
+mkdir -p $RPM_BUILD_ROOT/usr/share/applications
+cp soundpanel_soundpanel.desktop $RPM_BUILD_ROOT/usr/share/applications/soundpanel_soundpanel.desktop
+if test "@STRIP_DEBUG@" = "yes" ; then
+  strip $RPM_BUILD_ROOT@LOCAL_PREFIX@/bin/soundpanel
+fi
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root)
+@LOCAL_PREFIX@/bin/soundpanel
+@LOCAL_PREFIX@/share/icons/hicolor/16x16/apps/soundpanel.xpm
+@LOCAL_PREFIX@/share/icons/hicolor/22x22/apps/soundpanel.xpm
+@LOCAL_PREFIX@/share/icons/hicolor/32x32/apps/soundpanel.xpm
+@LOCAL_PREFIX@/share/icons/hicolor/48x48/apps/soundpanel.xpm
+@LOCAL_PREFIX@/share/X11/fvwm2/pixmaps/mini.soundpanel.xpm
+@LOCAL_PREFIX@/share/X11/fvwm2/pixmaps/soundpanel.xpm
+/usr/share/applications/soundpanel_soundpanel.desktop
+%doc README INSTALL NEWS AUTHORS ChangeLog COPYING TODO
+%doc soundpanel-16x16.xpm
+%doc soundpanel-22x22.xpm
+%doc soundpanel-32x32.xpm
+%doc soundpanel-48x48.xpm
+
+%changelog
+* Thu Dec 09 2010 Fred Gleason <fredg@paravelsystems.com>
+-- Refactored desktop files.
+* Fri Jun 25 2010 Fred Gleason <fredg@paravelsystems.com>
+-- Added icons for fvwm(1).
+-- Added code to strip binaries.
+* Wed Dec 19 2007 Fred Gleason <fredg@paravelsystems.com>
+-- Changed 'Copyright:' tag to 'License:'.
+* Mon Feb 13 2006 Fred Gleason <fredg@salemradiolabs.com>
+-- Altered the install section so as not to use 'make install'.
+* Wed Feb 08 2006 Fred Gleason <fredg@salemradiolabs.com>
+-- Altered install paths to use $prefix value from Autoconf.
+* Fri Feb 03 2006 Fred Gleason <fredg@salemradiolabs.com>
+- Added 'cdda2wav' dependency.
+* Thu Nov 12 2005 Fred Gleason <fredg@salemradiolabs.com>
+- Fixed KDE menu integration.
+* Thu Nov 03 2005 Fred Gleason <fredg@salemradiolabs.com>
+- Added dependencies for 'update-desktop-files' and 'gettext'.
+* Mon Oct 31 2005 Fred Gleason <fredg@salemradiolabs.com>
+- Added icons.
+* Fri Sep 10 2004 Fred Gleason <fredg@salemradiolabs.com>
+- Removed support for ALSA.
+* Thu Dec 18 2003 Fred Gleason <fredg@salemradiolabs.com>
+- Added 'sox' and 'cdparanoia' dependencies.
+* Wed Dec 17 2003 Fred Gleason <fredg@salemradiolabs.com>
+- Updated for v0.2.2.
+- Integrated into the build system.
+* Mon Apr 28 2003 Fred Gleason <fredg@salemradiolabs.com>
+- Updated for v0.2.0.
+* Fri Apr 04 2003 Fred Gleason <fredg@salemradiolabs.com>
+- Updated for v0.1.1.
+* Thu Apr 03 2003 Fred Gleason <fredg@salemradiolabs.com>
+- Ported from the ALSA build.
+* Thu Apr 03 2003 Fred Gleason <fredg@salemradiolabs.com>
+- Libradio bugfixes.
+* Wed Apr 02 2003 Fred Gleason <fredg@salemradiolabs.com>
+- Initial RPM creation.

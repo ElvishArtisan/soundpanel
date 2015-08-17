@@ -1,0 +1,19 @@
+Known bugs and ToDo items for the SoundPanel package:
+
+Documentation!  Any volunteers?
+
+Add dynamic panel quantities, with the ability to insert/delete complete
+panels, thus allowing creation of arrays of arbitrary size.  This
+should happen as soon as I get all of Qt's STL gunk figured out.
+[DONE 4/28/2003 FFG]
+
+Put the ALSA ring buffer service routines in their own thread, rather
+than in the primary GUI event loop.
+
+Add GPI support, thus allowing remote control of the buttons from an
+audio console or similar control surface.
+
+Anything else?
+
+
+Fred Gleason <fredg@paravelsystems.com>

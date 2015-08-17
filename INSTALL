@@ -1,0 +1,66 @@
+This is the installation file for the SoundPanel package.
+
+PREREQUISITES
+You will need the following installed and configured properly on your 
+system before building:
+
+X11 Window System
+Virtually all Linux distros should include this.
+
+Qt Toolkit, v3.2 or better
+Most modern Linux distros include this.  It's typically installed as part
+of the KDE Desktop Environment, although KDE itself is by no means required.
+It can also be downloaded directly from TrollTech (http://www.trolltech.com/).
+
+AudioScience HPI Driver
+For supporting AudioScience's line of high-end professional audio
+adapters.  It's available in binary form (with C headers)
+from http://www.salemradiolabs.com/asi/.  
+
+The libradio Radio Library
+This is a class library that contains much of the 'generic'
+functionality used by SoundPanel (and other packages beside).  You can
+get it at http://www.salemradiolabs.com/master_download.shtml.  You need 
+version 0.94.0 or better.
+
+AudioScience HPI Driver - v2.88 or greater.
+For supporting AudioScience's line of high-end professional audio adapters.  
+See http://www.audioscience.com/.
+
+LibRHpi library
+You'll need version 0.94.4 or greater, available at: 
+http://www.salemradiolabs.com/master_download.shtml.
+
+Cdda2Wav - CD Ripper Engine
+Optional, but needed if you want the CD ripper to work.  Included in
+most distributions, but also available from http://www.cdda2wav.de/.
+
+CDParanoia - Another CD Ripper Engine
+Optional, but needed if you want the CD ripper to work.  Needed in
+order to support the full 'paranoia' mode of the CD ripper.  Included
+in most distributions, but also available from
+http://www.xiph.org/paranoia/.
+
+SoX - Sound eXchange Universal Sound Sample Translator
+Optional, but needed if you want the CD ripper or sound file importing
+to work.  Included in most distributions, but also available from
+http://sox.soundforge.net/.
+
+INSTALLATION
+Once the prerequisites are set up, installation is most often a matter of 
+typing './configure', 'make', followed (as root) by 'make install' in
+the top level directory. 
+
+QT-4 NOTES
+Some distros may require that the CPPFLAGS and LDFLAGS environmental
+variables be set prior to running ./configure in order for Qt 4 to be detected
+properly.  Some known case are:
+
+CentOS/RedHat:  export CPPFLAGS=-I/usr/lib64/qt4/include
+                export LDFLAGS=-L/usr/lib64/qt4/lib64
+                export PATH=/usr/lib64/qt4/bin:$PATH
+
+Good Luck!
+
+
+Fred Gleason <fredg@paravelsystems.com>

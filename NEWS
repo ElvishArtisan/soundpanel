@@ -1,0 +1,75 @@
+The NEWS file for the SoundPanel package.
+
+-------------------------------------------------------------------------------
+v0.9.3 -- 03/16/2006
+
+This release is only to accomadate changes in the linking libraries
+needed to support changes in LibRadio.  No new functionality.
+
+-------------------------------------------------------------------------------
+v0.9.2 -- 02/15/2006
+
+Added make targeets for building Slackware and SLAX packages, using
+'make slack' and 'make slax', respectively.
+
+-------------------------------------------------------------------------------
+v0.9.1 -- 12/01/2005
+
+This is a bugfix release, that fixes a problem with adding new button
+items with a blank 'Legend' entry.
+
+-------------------------------------------------------------------------------
+v0.9.0 -- 11/10/2005
+Changes:
+   Added a 'Cut' item to the panel button right-click menu.
+
+   Numerous small bugfixes -- see the 'ChangeLog' for details.
+
+-------------------------------------------------------------------------------
+v0.8.1 -- 12/17/2004
+Changes:
+   ALSA is no longer supported.
+
+   It is now possible to play back .mp2 and .mp3 format files if your
+   ASI card supports the appropriate MPEG layer.
+-------------------------------------------------------------------------------
+v0.4.1 -- 4/5/2004
+A beta release.
+
+     *.mp* file format playout support added for the HPI version.  The
+     underlying hardware must support the appropriate MPEG format
+     (e.g. an ASI6000 series adapter will be needed for *.mp3 support.
+
+     Added a 'General' item to the 'Settings' menu, where the default
+     array to load upon startup can be specified.
+-------------------------------------------------------------------------------
+v0.2.1 -- 4/28/2003
+A beta release.
+
+     SoundPanel can now be resized.  The panel buttons will scale
+     accordingly.
+
+     Input and output level controls have been added to Sound Devices
+     dialog (HPI version only).
+
+     Miscellaneous bugfixes.  See the ChangeLog for details.
+-------------------------------------------------------------------------------
+v0.2.1 -- 4/28/2003
+A beta release.
+
+     Fixed a missing 'defaults.h' file.
+-------------------------------------------------------------------------------
+v0.2.0 -- 4/28/2003
+A beta release.  The major highlights:
+
+     Dynamic panels.  It's now possible to insert and delete whole
+     panels from an array, thus making possible arrays of arbitrary size,
+     limited only by the physical capacity of the underlying
+     filesystems.
+
+     A raft of bugfixes.  See the ChangeLog for the nitty-gritty.
+-------------------------------------------------------------------------------
+v0.1.0 
+The initial beta release.  See the README file for details.
+
+-------------------------------------------------------------------------------

@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+                                       |-----handy-ruler------------------------------------------------------|
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: soundpanel (An audio cart wall utility)
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: 
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: SoundPanel is an audio cart wall system targeted for use in
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: professional broadcasting and live performance environments.  It 
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: features the ability to swiftly select and play an audio cut out of a
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: potential selection of hundreds, while also offering features to
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: assist in the creation and maintenance of audio recordings.
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: 
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: 
+soundpanel-@VERSION@-i586-@RPM_RELEASE@: 
+soundpanel-@VERSION@-i586-@RPM_RELEASE@:

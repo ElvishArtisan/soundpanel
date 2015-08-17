@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=AudioVideo;Player;
+Encoding=UTF-8
+Name=SoundPanel
+GenericName=Cart Wall
+Exec=soundpanel %f
+Icon=soundpanel
+Path=
+Type=Application
+Terminal=false

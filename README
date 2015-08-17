@@ -1,0 +1,48 @@
+This is the README file for the SoundPanel package.
+
+This software comes with ABSOLUTELY NO WARRANTY.  See the file COPYING for
+details.
+
+This software is BETA code.  As such, it is intended primarily for
+testing and evaluation, and may contain bugs, possibly serious ones.
+
+Sound panel is an application for the organization and playout of
+audio cuts.  Targeted for use in busy Broadcast and Live Performance 
+environments, SoundPanel is capable of referencing hundreds or
+thousands of audio cuts, making them available both on programmable 
+"panels" of buttons and via SoundPanel's built-in search engine.  The 
+intent throughout is to provide *fast* access to a large spectrum of 
+audio.  
+
+SoundPanel Features and Benefits:
+
+Optimized for speed.  Any audio in the entire array can be located and
+played within a few seconds.
+
+Support for AudioScience HPI sound drivers.
+
+Dynamically-sized panel arrays allow for indexing and access of 
+thousands of cuts, limited only by the physical capacity of the 
+underlying filesystems.
+
+Built-in audio recorder allows audio to be recorded directly to an array
+button, without the need for a separate recording application.
+
+Integrated CD ripper allows CD tracks to be ripped directly to
+array buttons (uses the CDParanoia ripper engine).
+
+Built-in hooks to allow seamless use with an external audio editor.
+
+All configuration and setup done using point-and-click interfaces --
+*no* arcane configuration files to edit!
+
+Completely free and open -- no dongles, unlock codes, software keys or
+other arbitrary limitations.
+
+
+Installation instructions can be found in the 'INSTALL' file.
+
+Good Luck!
+
+
+Fred Gleason <fredg@paravelsystems.com>

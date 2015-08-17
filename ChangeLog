@@ -1,0 +1,422 @@
+2003-03-09 Fred Gleason <fredg@salemradiolabs.com>
+	* Initial package creation
+2003-03-10 Fred Gleason <fredg@salemradiolabs.com>
+	* Basic features now working.
+2003-03-11 Fred Gleason <fredg@salemradiolabs.com>
+	* All audio features now working.  Started work on UI usability
+	features.
+2003-03-12 Fred Gleason <fredg@salemradiolabs.com>
+	* More work on audio buttons.
+	* Added an 'EditButton' class.
+2003-03-16 Fred Gleason <fredg@salemradiolabs.com>
+	* Added 'SndProperties' class.
+	* Completed basic functions, ready for testing.
+2003-03-17 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug where the 'File' menu was not enabling/disabling
+	items correctly.
+	* Fixed a bug where pressing an unassigned button would stop the
+	currently playing audio.
+	* Created an 'EditDevices' class.
+	* Removed ALSA Device configuration from 'SndProperties'.
+	* Created a seperate configuration file (called '~/.sndarrayrc')
+	to store hardware-specific values independently of the array file.
+	* Moved the ALSA Device values to '.sndarrayc'.
+	* Created a 'RecordAudio' class.
+	* Added a dialog box to warn against exiting with an unsaved array
+	file.
+2003-03-18 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug where the 'Quit' command would fail if invoked with
+	an already saved array.
+2003-03-22 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug where the 'New' and 'Open' commands would fail to
+	warn the user of an unsaved array.
+	* Added a command line option '-c <conf-file>'.
+	* Added the ability to pass the name of the array to open as the
+	last argument of the command line.
+2003-03-23 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'sndarray.cpp' that was failing to prompt to save
+	a changed array before exiting upon receipt of a 'closeEvent()'.
+	* Added HPI support.
+	* Added both Playback and Record audio meters.
+	* Added the beginnings of a 'Last Loaded' list in the 'File' menu.
+	Still needs more work.
+2003-03-24 Fred Gleason <fredg@salemradiolabs.com>
+	* Added AES/EBU input support (HPI mode only).
+	* Added an 'About' option to the 'Help' menu.
+	* Completed the 'About' box.
+2003-03-25 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a 'RipperDialog' class in 'ripper_dialog.cpp'.
+	* Added an 'EditRipper' class in 'edit_ripper.cpp'.
+	* Added an 'RCdrom' class in 'rcdrom.cpp'.
+	* More work on 'RCdrom'.  Basically complete except for the
+	'trackLength()' method.
+2003-03-26 Fred Gleason <fredg@salemradiolabs.com>
+	* Completed 'RCdrom'.
+2003-03-26 Fred Gleason <fredg@salemradiolabs.com>
+	* Added macros to detect CDParanoia to 'configure.in' and
+	'Makefile.am'.
+	* Completed the CD Ripper.
+2003-03-27 Fred Gleason <fredg@salemradiolabs.com>
+	* Added the '-d' argument to the invocation to 'cdparanoia' in
+	'ripper_dialog.cpp'.
+	* Removed macros to detect CDParanoia from 'configure.in' and
+	'Makefile.am'.
+	* Added a setting to the ripper configuration to set Paranoia
+	Level.
+2003-03-28 Fred Gleason <fredg@salemradiolabs.com>
+	* Added error handling to the Ripper Dialog.
+	* Added an 'EditEditor' class.
+	* Completed the 'Edit Audio' feature on the button menu.
+	* Rearranged the right-click menu so as to clearly distinguish
+	between operations that affect button appearance versus those that
+	affect underlying audio.
+2003-03-28 Fred Gleason <fredg@salemradiolabs.com>
+	* Began work on multi-panel support.
+	* Switched panel data structures from automatic to allocated
+	storage.
+2003-03-29 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a 'Loop' button.
+2003-03-30 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'sndarray.cpp' that was causing button
+	right-clicks to fail in certain circumstances.
+	* Fixed a bug in 'sndarray.cpp' that was causing the cut length to
+	fail to be properly indcated after loading an array.
+2003-04-01 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a Loadable Deck area.
+2003-04-01 Fred Gleason <fredg@salemradiolabs.com>
+	* Added the ability to search the array, and load the result into
+	the loadable deck.
+2003-04-01 Fred Gleason <fredg@salemradiolabs.com>
+	* Reworked the 'LoadFile()' method to use a much more efficient
+	algorithm.
+	* Added a 'PanelBox' class in 'panelbox.cpp'.
+	* Added a 'PanelName' class in 'panel_name.cpp'.
+2003-04-02 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a timer to the loadable deck area.
+	* Added a pause button to the loadable deck area.
+2003-04-02 Fred Gleason <fredg@salemradiolabs.com>
+	* Changed the name of the package to 'SoundPanel'.
+2003-04-02 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a 'TODO' file.
+2003-04-02 Fred Gleason <fredg@salemradiolabs.com>
+	* Added 'TODO' to the EXTRA_DIST list in 'Makefile.am'.
+	* Released as v0.1.0.
+2003-04-04 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a typo in the caption on the CD ripper dialog.
+	* Fixed a bug in 'soundpanel.cpp' that was assigning incorrect
+	default panel names.
+	* Increased the length of the panel selector control.
+	* Released as v0.1.1
+2003-04-27 Fred Gleason <fredg@salemradiolabs.com>
+	* Added the 'Panel' class, in 'panel.cpp' and 'panel.h'.
+	* Fixed a bug in 'soundpanel.cpp' where loading a new array failed
+	to initialize the panel indicator.
+2003-04-28 Fred Gleason <fredg@salemradiolabs.com>
+	* Changed 'soundpanel.cpp' to use a vector of 'Panel' for panel
+	data.
+	* Added the ability to insert/delete panels dynamically.
+	* Changed the default panel quantity to '1'.
+	* Released as v0.2.0.
+2003-04-28 Fred Gleason <fredg@salemradiolabs.com>
+	* Released a v0.2.1.
+2003-05-22 Fred Gleason <fredg@salemradiolabs.com>
+	* Added an 'ArrayButton' class in 'array_button.cpp'.
+	* Changed SoundPanel so that the Left/Right/Up/Down keys move
+	can be used to select which array button has current focus in an
+	intuitive fashion --i.e. Up/Down moves the focus up/down in the
+	panel.
+2003-07-28 Fred Gleason <fredg@salemradiolabs.com>
+	* Added code to 'about.cpp' to handle fonts properly under SuSE
+	8.2.
+	* Added code to 'edit_button.cpp' to handle fonts properly under 
+	SuSE 8.2.
+	* Added code to 'edit_devices.cpp' to handle fonts properly under 
+	SuSE 8.2.
+	* Added code to 'edit_editor.cpp' to handle fonts properly under 
+	SuSE 8.2.
+	* Added code to 'edit_ripper.cpp' to handle fonts properly under 
+	SuSE 8.2.
+	* Added code to 'panel_name.cpp' to handle fonts properly under 
+	SuSE 8.2.
+	* Added code to 'record_audio.cpp' to handle fonts properly under 
+	SuSE 8.2.
+	* Added code to 'ripper_dialog.cpp' to handle fonts properly under 
+	SuSE 8.2.
+	* Added code to 'search_array.cpp' to handle fonts properly under 
+	SuSE 8.2.
+	* Added code to 'soundpanel.cpp' to handle fonts properly under 
+	SuSE 8.2.
+2003-07-28 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a 'FreeDB Server' field to the Ripper Configuration dialog
+	box.
+	* Added FreeDB support to the CD Ripper.
+	* Added a 'Normal Level' spin box to the Ripper Configuration
+	dialog box.
+2003-07-29 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'soundpanel.cpp' that was causing certain Unicode
+	characters to be mangled when displayed on buttons.
+	* Adjusted some of the fonts and field layouts in the CD Ripper
+	dialog box.
+	* Added normalization support to the CD Ripper.
+	* Added the ability to select the sample rate and number of
+	channels of the output file to the CD Ripper.
+2003-07-29 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'ripper_dialog.cpp' that was causing a
+	prompt-because-of-changes messages at exit even if the Ripper
+	Dialog was exited without making any successful rips.
+	* Adjusted the size of the normalization level spin box in
+	'ripper_dialog.cpp'.
+2003-12-06 Fred Gleason <fredg@salemradiolabs.com>
+	* Added support for the MAD MPEG library to 'configure.in' and
+	'Makefile.am'.
+2003-12-14 Fred Gleason <fredg@salemradiolabs.com>
+	* Removed 'depcomp'.
+	* Removed 'install-sh'.
+	* Removed 'missing'.
+	* Removed 'mkinstalldirs'.
+	* Added 'autogen.sh'.
+2003-12-17 Fred Gleason <fredg@salemradiolabs.com>
+	* Added 'soundpanel.spec.in'.
+	* Added a 'make rpm' target.
+2003-12-18 Fred Gleason <fredg@salemradiolabs.com>
+	* Added 'sox' and 'cdparanoia' dependencies to the RPM spec file.
+	* Fixed a bug in 'ripper_dialog.cpp' where specifying a
+	destination filename without a '.wav' extension would create an
+	extensionless file.
+	* Fixed a bug in 'record_audio.cpp' where specifying a
+	destination filename without a '.wav' extension would create an
+	extensionless file.
+	* Released as v0.2.3
+2003-12-20 Fred Gleason <fredg@salemradiolabs.com>
+	* Added port level controls to the audio device dialog for HPI.
+2003-12-21 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a 'dBu' unit to the level labels in the 'EditDevices'
+	widget.
+2003-12-21 Fred Gleason <fredg@salemradiolabs.com>
+	* Added resize capability.  Still a WIP.
+2003-12-26 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a 'WrapText()' method to 'array_button.cpp'.
+2003-12-26 Fred Gleason <fredg@salemradiolabs.com>
+	* Reverted to manual geometry management.
+	* Added 'SizeX=' and 'SizeY=' parameters in the configuration.
+2003-12-27 Fred Gleason <fredg@salemradiolabs.com>
+	* Added 'color()' and 'setColor()' methods to 'array_button.cpp'.
+	* Added 'color()' and 'setColor()' methods to 'panel.cpp'.
+	* Added keybindings for 'Home' (Start) and 'End' (Stop) keys.
+2003-12-27 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'record_audio.cpp' that was causing an invalid
+	time length to appear when not assigned to a wave file.
+	* Increased the size of the 'Legend' edit widget in
+	'record_audio.cpp'.
+	* Increased the size of the 'Legend' edit widget in
+	'ripper_dialog.cpp'.
+2003-12-27 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a 'Chain' button to 'soundpanel.cpp' to toggle button
+	chaining.
+	* Added a 'ChainActive=' parameter in the configuration.
+2004-01-15 Fred Gleason <fredg@salemradiolabs.com>
+	* Incremented the version to v0.3.0.
+2004-01-16 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a typo in 'configure.in' that was causing 'make rpm' to
+	fail when used with pre-4.x versions of rpm(8).
+	* Fixed a bug in 'soundpanel.cpp' that was causing right-clicks on
+	buttons to fail when the mouse cursor was beyond default size
+	limits of the main window.
+	* Incremented the version to v0.3.1.
+2004-01-16 Fred Gleason <fredg@salemradiolabs.com>
+	* Added 'soundpanel.spec.in' to EXTRA_DIST.
+2004-01-16 Fred Gleason <fredg@salemradiolabs.com>
+	* Updated the 'INSTALL' and 'NEWS' files.
+	* Released as v0.3.1.
+2004-01-29 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'soundpanel.cpp' that was causing array buttons
+	to display the incorrect color after audio playout finished.
+	* Changed the level-set code for analog audio input in HPI mixers
+	to be correct.
+	* Released as v0.3.2
+2004-02-18 Fred Gleason <fredg@salemradiolabs.com>
+	* Added the Pthreads library to the linker list for the ALSA
+	version.
+2004-03-15 Fred Gleason <fredg@salemradiolabs.com>
+	* Modified 'soundpanel.cpp' to be consistent with the new
+	RPlayStream contructor parameters.
+	* Modified 'record_audio.cpp' to be consistent with the new
+	RPlayStream contructor parameters.
+2004-03-24 Fred Gleason <fredg@salemradiolabs.com>
+	* Incremented the RPM build version to 2.
+2004-04-05 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'record_audio.cpp' that was causing sound playout
+	to fail after exiting from the Record dialog.
+	* Added support for *.mp1, *.mp2 and *.mp3 file formats.
+	* Added an 'EditGeneral' dialog box in 'edit_general.cpp'.
+2004-04-05 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'soundpanel.cpp' that was causing the wrong input
+	mixer level settings to be used .
+	* Fixed a bug in 'soundpanel.cpp' that was causing playout to fail
+	if a previous playout attempt had failed due to an unsupported 
+	file format.
+	* Incremented the version to 0.4.0.
+2004-04-12 Fred Gleason <fredg@salemradiolabs.com>
+	* Incremented the RPM build version to 3.
+2004-08-27 Fred Gleason <fredg@salemradiolabs.com>
+	* Removed ALSA support.
+	* Added build support for 'librhpi'.
+	* Added a sanity check to 'ripper_dialog.cpp' to prevent the
+	dialog from being closed during an active rip.
+	* Added code to 'ripper_dialog.cpp' to enforce a fixed dialog box 
+	size.
+	* Added code to 'edit_general.cpp' to enforce a fixed dialog box 
+	size.
+	* Added code to 'edit_devices.cpp' to enforce a fixed dialog box 
+	size.
+	* Added code to 'edit_editor.cpp' to enforce a fixed dialog box 
+	size.
+	* Added code to 'edit_ripper.cpp' to enforce a fixed dialog box 
+	size.
+	* Added code to 'edit_button.cpp' to enforce a fixed dialog box 
+	size.
+	* Added code to 'about.cpp' to enforce a fixed dialog box 
+	size.
+	* Added code to 'record_audio.cpp' to enforce a fixed dialog box 
+	size.
+	* Added code to 'search_array.cpp' to enforce a fixed dialog box 
+	size.
+	* Added code to 'snd_properties.cpp' to enforce a fixed dialog box 
+	size.
+2004-08-27 Fred Gleason <fredg@salemradiolabs.com>
+	* Removed 'RSound' from the link list in 'Makefile.am'.
+	* Adjusted text label alignment for SuSE 9.1 in
+	'ripper_dialog.cpp'.
+	* Adjusted text label alignment for SuSE 9.1 in
+	'edit_devices.cpp'.
+	* Adjusted text label alignment for SuSE 9.1 in
+	'edit_ripper.cpp'.
+	* Adjusted text label alignment for SuSE 9.1 in
+	'edit_editor.cpp'.
+	* Adjusted text label alignment for SuSE 9.1 in
+	'about.cpp'.
+	* Adjusted text label alignment for SuSE 9.1 in
+	'snd_properties.cpp'.
+	* Adjusted text label alignment for SuSE 9.1 in
+	'edit_general.cpp'.
+	* Adjusted text label alignment for SuSE 9.1 in
+	'search_array.cpp'.
+	* Added a 'closeEvent()'method to 'search_array.cpp'.
+	* Added a 'closeEvent()'method to 'edit_button.cpp'.
+	* Added a 'closeEvent()'method to 'edit_devices.cpp'.
+	* Added a 'closeEvent()'method to 'edit_editor.cpp'.
+	* Added a 'closeEvent()'method to 'edit_general.cpp'.
+	* Added a 'closeEvent()'method to 'edit_ripper.cpp'.
+	* Added a 'closeEvent()'method to 'snd_properties.cpp'.
+2004-09-10 Fred Gleason <fredg@salemradiolabs.com>
+	* Incremented the package version to 0.8.0.
+2004-09-20 Fred Gleason <fredg@salemradiolabs.com>
+	* Added a control to select clock source in
+	Settings->AudioDevices.
+2004-10-06 Fred Gleason <fredg@salemradiolabs.com>
+	* Added OggVorbis support.
+	* Fixed a bug in 'soundpanel.cpp' that was causing play device
+	format detection to fail.
+2004-12-17 Fred Gleason <fredg@salemradiolabs.com>
+	* Incremented the package version to 0.8.1.
+2005-02-10 Fred Gleason <fredg@salemradiolabs.com>
+	* Removed the messagebox warning about incorrect input port type 
+	in 'soundpanel.cpp'.
+2005-10-31 Fred Gleason <fredg@salemradiolabs.com>
+	* Added icons in 'soundpanel-16x16.xpm', 'soundpanel-22x22.xpm',
+	'soundpanel-32x32.xpm', 'soundpanel-48x48.xpm'.
+	* Added KDE menu integration support in 'soundpanel.spec.in'.
+2005-11-03 Fred Gleason <fredg@salemradiolabs.com>
+	* Added 'update-desktop-files' and -gettext' dependencies in
+	'soundpanel.spec.in'.
+2005-11-04 Fred Gleason <fredg@salemradiolabs.com>
+	* Modified 'soundpanel.spec.in' to not require the
+	'update_desktop_files' script for desktop menu integration.
+2005-11-10 Fred Gleason <fredg@salemradiolabs.com>
+	* Moved the installation location of 'soundpanel.desktop' to
+	'/usr/share/applications/'.
+2005-11-10 Fred Gleason <fredg@salemradiolabs.com>
+	* Added the '-Wall' flag to AM_CPPFLAGS in 'Makefile.am'.
+	* Fixed various compiler warnings.
+2005-11-10 Fred Gleason <fredg@salemradiolabs.com>
+	* Updated the 'INSTALL' file.
+	* Updated the 'NEWS' file.
+	* Incremented the package version to 0.9.0.
+2005-12-01 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'array_button.cpp' that was causing a lock-up
+	when adding a new button item with an empty 'Legend' entry (Mantis
+	bug #122).
+2005-12-01 Fred Gleason <fredg@salemradiolabs.com>
+	* Updated the 'NEWS' file.
+	* Incremented the package version to 0.9.1.
+2006-01-27 Fred Gleason <fredg@salemradiolabs.com>
+	* Added 'make_slack.in' and 'slack-desc.in' files.
+	* Added 'make slack' and 'make slax' build targets.
+2006-01-31 Fred Gleason <fredg@salemradiolabs.com>
+	* Fixed a bug in 'make_slack.in' that was causing several icons
+	to fail to be included in the Slackware package.
+2006-02-03 Fred Gleason <fredg@salemradiolabs.com>
+	* Added CD-TEXT support to the CD Ripper in 'ripper_dialog.cpp'.
+	* Added 'cdda2wav' to the 'Requires:' list in 'soundpanel.spec.in'.
+	* Added cdda2wav(1) to the list of dependencies in 'INSTALL'.
+2006-02-08 Fred Gleason <fredg@salemradiolabs.com>
+	* Modified 'soundpanel.spec.in' and 'make_slack.in' to use the
+	install paths provided by Autoconf.
+2006-02-14 Fred Gleason <fredg@salemradiolabs.com>
+	* Modified the 'make rpm' target in 'Makefile.am' to properly
+	clean up the RPM build tree after the build.
+	* Modified the 'make rpm' target in 'Makefile.am' to move the
+	finished RPMs to the top source directory.
+2006-02-15 Fred Gleason <fredg@salemradiolabs.com>
+	* Updated the 'NEWS' file.
+	* Incremented the package version to 0.9.2.
+2006-03-10 Fred Gleason <fredg@salemradiolabs.com>
+	* Added 'id3lib' and 'libFLAC' to the list of libraries linked
+	against.
+2006-03-16 Fred Gleason <fredg@salemradiolabs.com>
+	* Updated the 'NEWS' file.
+	* Incremented the package version to 0.9.3.
+2006-03-05 Fred Gleason <fredg@salemradiolabs.com>
+	* Updated the e-mail address in the copyright notices.
+2007-12-19 Fred Gleason <fredg@paravelsystems.com>
+	* Imported methods from LibRadio.
+	* Updated 'soundpanel.spec.in' to use 'License:' tag.
+2007-09-06 Fred Gleason <fredg@paravelsystems.com>
+	* Ported code to run under Qt 4.x.
+	* Removed the 'BNV_HAVE_QT' macro from 'acinclude.m4'.
+2007-09-19 Fred Gleason <fredg@paravelsystems.com>
+	* Fixed a bug in 'playmeter.cpp' that caused the meter to have the
+	wrong background color.
+2010-06-24 Fred Gleason <fredg@paravelsystems.com>
+	* Fixed a bug in 'soundcard.cpp' that broke the build with 4.x ASI
+	drivers.
+2010-06-24 Fred Gleason <fredg@paravelsystems.com>
+	* Incremented the package version to 0.9.4.
+2010-06-25 Fred Gleason <fredg@paravelsystems.com>
+	* Added icons for fvwm(1) in 'soundpanel.spec.in'.
+	* Added a '--with-debug' switch in 'configure.in'.
+2010-06-25 Fred Gleason <fredg@paravelsystems.com>
+	* Incremented the package version to 0.9.5.
+2010-12-06 Fred Gleason <fredg@paravelsystems.com>
+	* Made FLAC metadata support conditional.
+	* Added RedHat/CentOS build notes in 'INSTALL'.
+2010-12-09 Fred Gleason <fredg@paravelsystems.com>
+	* Renamed 'soundpanel.desktop' to 'soundpanel_soundpanel.desktop'.
+	* Removed obsolete entries from 'soundpanel_soundpanel.desktop'.
+2010-12-09 Fred Gleason <fredg@paravelsystems.com>
+	* Incremented package version to 0.9.6.
+2010-12-16 Fred Gleason <fredg@paravelsystems.com>
+	* Fixed a bug in 'soundcard.cpp' that broke the build with ASI driver
+	v4.04.07.
+2010-12-16 Fred Gleason <fredg@paravelsystems.com>
+	* Incremented package version to 0.9.7.
+2012-09-10 Fred Gleason <fredg@paravelsystems.com>
+	* Modified 'playstream.cpp', 'playstream.h', 'soundcard.cpp' and
+	'soundcard.h' to be compatibile with HPI driver v4.10.x.
+2012-09-10 Fred Gleason <fredg@paravelsystems.com>
+	* Incremented package version to 0.9.8.
+2013-12-13 Fred Gleason <fredg@paravelsystems.com>
+	* Fixed a bug in 'array_button.cpp' that caused a segfault in the
+	'WrapText()' method.
+2013-12-13 Fred Gleason <fredg@paravelsystems.com>
+	* Incremented the package version to 0.9.9.

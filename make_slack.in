@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# make_slack
+#
+# Make a Slackware package.
+#
+# (C) Copyright 2006 Fred Gleason <fredg@paravelsystems.com>
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of version 2 of the GNU General Public License as
+#    published by the Free Software Foundation;
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, 
+#    Boston, MA  02111-1307  USA
+#
+
+#
+# Clean the build tree
+#
+BUILD_DIR=/var/tmp/soundpanel-@VERSION@
+rm -rf $BUILD_DIR
+
+#
+# Build the package tree
+#
+mkdir -p $BUILD_DIR@LOCAL_PREFIX@/bin
+cp soundpanel $BUILD_DIR@LOCAL_PREFIX@/bin/
+mkdir -p $BUILD_DIR/install
+cp slack-desc $BUILD_DIR/install/
+mkdir -p $BUILD_DIR/usr/doc/soundpanel-@VERSION@
+cp AUTHORS $BUILD_DIR/usr/doc/soundpanel-@VERSION@/
+cp ChangeLog $BUILD_DIR/usr/doc/soundpanel-@VERSION@/
+cp COPYING $BUILD_DIR/usr/doc/soundpanel-@VERSION@/
+cp INSTALL $BUILD_DIR/usr/doc/soundpanel-@VERSION@/
+cp NEWS $BUILD_DIR/usr/doc/soundpanel-@VERSION@/
+cp README $BUILD_DIR/usr/doc/soundpanel-@VERSION@/
+cp TODO $BUILD_DIR/usr/doc/soundpanel-@VERSION@/
+mkdir -p $BUILD_DIR/opt/kde/share/icons/hicolor/16x16/apps
+cp soundpanel-16x16.xpm $BUILD_DIR/opt/kde/share/icons/hicolor/16x16/apps/soundpanel.xpm
+mkdir -p $BUILD_DIR/opt/kde/share/icons/hicolor/22x22/apps
+cp soundpanel-22x22.xpm $BUILD_DIR/opt/kde/share/icons/hicolor/22x22/apps/soundpanel.xpm
+mkdir -p $BUILD_DIR/opt/kde/share/icons/hicolor/32x32/apps
+cp soundpanel-32x32.xpm $BUILD_DIR/opt/kde/share/icons/hicolor/32x32/apps/soundpanel.xpm
+mkdir -p $BUILD_DIR/opt/kde/share/icons/hicolor/48x48/apps
+cp soundpanel-48x48.xpm $BUILD_DIR/opt/kde/share/icons/hicolor/48x48/apps/soundpanel.xpm
+mkdir -p $BUILD_DIR/usr/share/applications
+cp soundpanel.desktop $BUILD_DIR/usr/share/applications/soundpanel.desktop
+
+#
+# Generate the package
+#
+SOURCE_DIR=`pwd`
+cd $BUILD_DIR
+makepkg --prepend --linkadd y --chown n soundpanel.tgz
+cd $SOURCE_DIR
+cp $BUILD_DIR/soundpanel.tgz ./soundpanel-@VERSION@-i586-@RPM_RELEASE@.tgz
+
+#
+# Clean up and exit
+#
+rm -r $BUILD_DIR
+
+
+# End of make_slack
