@@ -2,9 +2,7 @@
 //
 // The header file for the rconf package
 //
-//   (C) Copyright 1996-2004 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: conf.h,v 1.3 2010/12/06 16:53:10 cvs Exp $
+//   (C) Copyright 1996-2004,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -27,10 +25,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include <QtCore/QtCore>
-#include <QtGui/QtGui>
-#include <QtNetwork/QtNetwork>
-#include <QtSql/QtSql>
+#include <QtCore>
+#include <QtGui>
+#include <QtNetwork>
+#include <QtSql>
 
 /* Function Prototypes */
 int GetPrivateProfileBool(const char *,const char *,const char *,bool);

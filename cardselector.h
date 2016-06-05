@@ -2,9 +2,7 @@
 //
 // Audio Card Selector Widget
 //
-//   (C) Copyright 2002-2007 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: cardselector.h,v 1.2 2008/09/06 12:02:46 fredg Exp $
+//   (C) Copyright 2002-2007,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License version 2 as
@@ -23,7 +21,7 @@
 #ifndef CARDSELECTOR_H
 #define CARDSELECTOR_H
 
-#include <QtGui/QtGui>
+#include <QtGui>
 
 class CardSelector : public QWidget
 {

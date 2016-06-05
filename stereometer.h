@@ -24,7 +24,7 @@
 #ifndef STEREOMETER_H
 #define STEREOMETER_H
 
-#include <QtGui/QtGui>
+#include <QWidget>
 
 #include <segmeter.h>
 

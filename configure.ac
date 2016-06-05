@@ -61,7 +61,7 @@ AR_GET_DISTRO()
 #
 # Check for Qt
 #
-AC_CHECK_HEADER(QtCore/QtCore,[],[AC_MSG_ERROR([*** Qt4 not found, unable to continue ***])])
+PKG_CHECK_MODULES(QT4,QtGui QtCore QtNetwork Qt3Support,[],[AC_MSG_ERROR([*** Qt4 not found ***])])
 AC_CHECK_PROG(MOC_NAME,moc-qt4,[moc-qt4],[moc])
 AC_SUBST(MOC,$MOC_NAME)
 
@@ -71,7 +71,7 @@ AC_SUBST(MOC,$MOC_NAME)
 AC_CHECK_HEADER(vorbis/vorbisfile.h,[VORBIS_FOUND=yes],[])
 if test $VORBIS_FOUND = yes ; then
   AC_DEFINE(HAVE_VORBIS)
-  AC_SUBST(LIBVORBIS,"-lvorbis -lvorbisenc -lvorbisfile")
+  AC_SUBST(LIBVORBIS,"-logg -lvorbis -lvorbisenc -lvorbisfile")
 else
   AC_SUBST(LIBVORBIS,"")
 fi
@@ -117,9 +117,9 @@ else
 fi 
 
 
-AC_OUTPUT(./Makefile \
-          ./make_slack \
-          ./slack-desc \
-          ./soundpanel.spec \
+AC_OUTPUT(Makefile \
+          make_slack \
+          slack-desc \
+          soundpanel.spec \
 )
 chmod 755 make_slack

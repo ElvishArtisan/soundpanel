@@ -2,7 +2,7 @@
 //
 // A Cart Wall Utility
 //
-//   (C) Copyright 2003-2004 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2003-2004,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -28,18 +28,18 @@
 #include <audiosettingsdialog.h>
 #include <playmeter.h>
 
-#include <soundpanel.h>
-#include <edit_button.h>
-#include <snd_properties.h>
-#include <edit_devices.h>
-#include <record_audio.h>
-#include <ripper_dialog.h>
-#include <edit_ripper.h>
-#include <edit_editor.h>
-#include <search_array.h>
-#include <panel_name.h>
-#include <about.h>
-#include <conf.h>
+#include "soundpanel.h"
+#include "edit_button.h"
+#include "snd_properties.h"
+#include "edit_devices.h"
+#include "record_audio.h"
+#include "ripper_dialog.h"
+#include "edit_ripper.h"
+#include "edit_editor.h"
+#include "search_array.h"
+#include "panel_name.h"
+#include "about.h"
+#include "conf.h"
 
 //
 // Icons
@@ -56,7 +56,6 @@ QString array_file_filter;
 // Prototypes
 //
 void SigHandler(int signo);
-
 
 MainWidget::MainWidget(QWidget *parent,const char *name)
   :QMainWindow(parent,name)

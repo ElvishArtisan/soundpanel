@@ -2,7 +2,7 @@
 //
 // A Cart Wall Utility
 //
-//   (C) Copyright 2003 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -19,32 +19,29 @@
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //
 
+#ifndef SOUNDPANEL_H
+#define SOUNDPANEL_H
 
-#ifndef SNDARRAY_H
-#define SNDARRAY_H
-
-#include <QtCore/QtCore>
+#include <QMainWindow>
 #include <QtGui/QtGui>
 
 #include <vector>
 
-#include <soundcard.h>
-#include <playstream.h>
-#include <playmeter.h>
-#include <transportbutton.h>
-#include <pushbutton.h>
-#include <audiosettings.h>
-#include <panelbox.h>
-#include <panel.h>
-#include <defaults.h>
-#include <array_button.h>
-#include <edit_general.h>
+#include "array_button.h"
+#include "audiosettings.h"
+#include "edit_general.h"
+#include "panel.h"
+#include "panelbox.h"
+#include "playmeter.h"
+#include "playstream.h"
+#include "pushbutton.h"
+#include "soundcard.h"
+#include "transportbutton.h"
 
 //
 // Global Variables
 //
 extern bool ripper_running;
-
 
 class MainWidget : public QMainWindow
 {

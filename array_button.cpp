@@ -2,7 +2,7 @@
 //
 // Array Buttons for SoundPanel.
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -19,10 +19,10 @@
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //
 
-#include <QtCore/QStringList>
+#include <QStringList>
 
-#include <conf.h>
-#include <array_button.h>
+#include "conf.h"
+#include "array_button.h"
 
 ArrayButton::ArrayButton(QWidget *parent,const char *name)
   : QPushButton(parent,name)

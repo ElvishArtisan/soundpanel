@@ -2,9 +2,7 @@
 //
 // Abstract a Linux CDROM Device.
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: cdplayer.h,v 1.2 2008/09/06 12:02:46 fredg Exp $
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -23,11 +21,11 @@
 #ifndef CDPLAYER_H
 #define CDPLAYER_H
 
-#include <QtGui/QtGui>
+#include <QtGui>
 
-#include <cddbrecord.h>
 #include <linux/cdrom.h>
 
+#include "cddbrecord.h"
 
 //
 // Driver Settings

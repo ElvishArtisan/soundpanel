@@ -2,7 +2,7 @@
 //
 // Edit SoundPanel General Configuration.
 //
-//   (C) Copyright 2002-2004 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2004,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -21,9 +21,8 @@
 
 #include <stdlib.h>
 
-#include <conf.h>
-#include <edit_general.h>
-
+#include "conf.h"
+#include "edit_general.h"
 
 EditGeneral::EditGeneral(EditGeneral::StartupArray *array_mode,QString *array,
 			 QString *path,QWidget *parent,const char *name)

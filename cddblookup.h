@@ -2,9 +2,7 @@
 //
 //   A Qt class for accessing the FreeDB CD Database.
 //
-//   (C) Copyright 2003 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: cddblookup.h,v 1.2 2008/09/06 12:02:46 fredg Exp $
+//   (C) Copyright 2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -24,10 +22,10 @@
 #ifndef CDDBLOOKUP_H
 #define CDDBLOOKUP_H
 
-#include <QtGui/QtGui>
-#include <QtNetwork/QtNetwork>
+#include <QtGui>
+#include <QtNetwork>
 
-#include <cddbrecord.h>
+#include "cddbrecord.h"
 
 //
 // Default Settings

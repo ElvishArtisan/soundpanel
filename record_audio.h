@@ -2,7 +2,7 @@
 //
 // Record Audio to a SoundPanel button.
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -22,14 +22,16 @@
 #ifndef RECORD_AUDIO_H
 #define RECORD_AUDIO_H
 
-#include <QtGui/QtGui>
+#include <QLabel>
+#include <QTimer>
+#include <QWidget>
 
-#include <transportbutton.h>
-#include <playstream.h>
-#include <recordstream.h>
-#include <audiosettings.h>
-#include <stereometer.h>
-#include <soundcard.h>
+#include "transportbutton.h"
+#include "playstream.h"
+#include "recordstream.h"
+#include "audiosettings.h"
+#include "stereometer.h"
+#include "soundcard.h"
 
 //
 // Meter Settings

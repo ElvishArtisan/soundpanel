@@ -2,9 +2,7 @@
 //
 // A Container Class for AudioScience HPI Adapter Info
 //
-//   (C) Copyright 2002-2007 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: information.cpp,v 1.2 2012/09/10 11:57:29 cvs Exp $
+//   (C) Copyright 2002-2007,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License version 2 as
@@ -20,8 +18,7 @@
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //
 
-#include <information.h>
-
+#include "information.h"
 
 Information::Information()
 {

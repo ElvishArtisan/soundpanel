@@ -2,9 +2,7 @@
 //
 //   A class for handling Microsoft WAV files.
 //
-//   (C) Copyright 2002-2006 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: wavefile.cpp,v 1.3 2010/12/06 16:53:10 cvs Exp $
+//   (C) Copyright 2002-2006,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -18,7 +16,6 @@
 //   You should have received a copy of the GNU General Public
 //   License along with this program; if not, write to the Free Software
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-//
 //
 
 #include <stdlib.h>
@@ -37,9 +34,8 @@
 #include <FLAC/metadata.h>
 #endif  // FLAC_METADATA_FOUND
 
-#include <wavefile.h>
-#include <conf.h>
-
+#include "conf.h"
+#include "wavefile.h"
 
 WaveFile::WaveFile(QString file_name)
 {

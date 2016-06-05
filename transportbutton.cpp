@@ -2,9 +2,7 @@
 //
 //   An audio transport button widget.
 //
-//   (C) Copyright 2002 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: transportbutton.cpp,v 1.2 2008/09/06 12:02:49 fredg Exp $
+//   (C) Copyright 2002,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -21,8 +19,11 @@
 //
 //
 
-#include <transportbutton.h>
+#include <QBitmap>
+#include <QPainter>
+#include <QTimer>
 
+#include "transportbutton.h"
 
 TransportButton::TransportButton(TransportButton::TransType type,
 				   QWidget *parent=0,

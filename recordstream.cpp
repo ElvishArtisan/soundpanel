@@ -2,9 +2,7 @@
 //
 //   A class for recording Microsoft WAV files.
 //
-//   (C) Copyright 2002-2007 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: recordstream.cpp,v 1.3 2012/09/10 11:57:30 cvs Exp $
+//   (C) Copyright 2002-2007,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License version 2 as
@@ -19,7 +17,6 @@
 //   License along with this program; if not, write to the Free Software
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //
-//
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -28,11 +25,9 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#include <recordstream.h>
+#include "recordstream.h"
 
-
-RecordStream::RecordStream(SoundCard *card,
-			     QWidget *parent,const char *name) 
+RecordStream::RecordStream(SoundCard *card,QWidget *parent,const char *name) 
   :QObject(parent,name),WaveFile()
 { 
   if(getenv(DEBUG_VAR)==NULL) {

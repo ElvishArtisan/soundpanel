@@ -2,9 +2,7 @@
 //
 //   A Container Class for Audio Meta Data.
 //
-//   (C) Copyright 2002-2006 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: wavedata.cpp,v 1.1 2007/12/19 20:22:23 fredg Exp $
+//   (C) Copyright 2002-2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -21,8 +19,7 @@
 //
 //
 
-#include <wavedata.h>
-
+#include "wavedata.h"
 
 WaveData::WaveData()
 {

@@ -2,7 +2,7 @@
 //
 // CD Ripper Dialog for SoundPanel.
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -27,11 +27,9 @@
 #include <fcntl.h>
 #include <linux/cdrom.h>
 
-#include <conf.h>
-#include <audiosettingsdialog.h>
-
-#include <ripper_dialog.h>
-
+#include "audiosettingsdialog.h"
+#include "conf.h"
+#include "ripper_dialog.h"
 
 RipperDialog::RipperDialog(QString *legend,QString *wavefile,
 			   QString *path,QString ripdev,int paranoia_level,

@@ -2,9 +2,7 @@
 //
 //   A class for recording Microsoft WAV files.
 //
-//   (C) Copyright 2002-2007 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: recordstream.h,v 1.3 2012/09/10 11:57:30 cvs Exp $
+//   (C) Copyright 2002-2007,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License version 2 as
@@ -28,10 +26,11 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-#include <QtGui/QtGui>
+#include <QTimer>
+#include <QWidget>
 
-#include <wavefile.h>
-#include <soundcard.h>
+#include "wavefile.h"
+#include "soundcard.h"
 
 #define DEBUG_VAR "_RECORDSTREAM"
 #define XRUN_VAR "_RSOUND_XRUN"
@@ -39,7 +38,6 @@
 #include <asihpi/hpi.h>
 #define AUDIO_SIZE 32768
 #define RECORDSTREAM_CLOCK_INTERVAL 100
-
 
 class RecordStream : public QObject,public WaveFile
 {

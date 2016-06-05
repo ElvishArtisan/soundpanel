@@ -22,7 +22,10 @@
 #ifndef EDIT_GENERAL_H
 #define EDIT_GENERAL_H
 
-#include <QtGui/QtGui>
+#include <QComboBox>
+#include <QDialog>
+#include <QLabel>
+#include <QLineEdit>
 
 class EditGeneral : public QDialog
 {

@@ -2,9 +2,7 @@
 //
 // Common Audio Settings
 //
-//   (C) Copyright 2002-2007 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: audiosettings.cpp,v 1.1 2007/12/19 20:22:23 fredg Exp $
+//   (C) Copyright 2002-2007,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -20,8 +18,7 @@
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //
 
-#include <audiosettings.h>
-
+#include "audiosettings.h"
 
 AudioSettings::AudioSettings()
 {

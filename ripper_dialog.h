@@ -2,7 +2,7 @@
 //
 // Information Screen for SoundPanel.
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -22,14 +22,18 @@
 #ifndef RIPPER_DIALOG_H
 #define RIPPER_DIALOG_H
 
-#include <QtGui/QtGui>
+#include <QCheckBox>
+#include <QFile>
+#include <QProgressBar>
+#include <QPushButton>
+#include <QSpinBox>
+#include <QTimer>
+#include <QTreeWidget>
 
-#include <transportbutton.h>
-#include <cddblookup.h>
-#include <cdplayer.h>
-
-#include <soundpanel.h>
-
+#include "transportbutton.h"
+#include "cddblookup.h"
+#include "cdplayer.h"
+#include "soundpanel.h"
 
 class RipperDialog : public QDialog
 {

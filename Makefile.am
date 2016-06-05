@@ -20,7 +20,7 @@
 ##   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 ##
 
-AM_CPPFLAGS = -Wall -DQT3_SUPPORT
+AM_CPPFLAGS = -Wall -DQT3_SUPPORT @QT4_CFLAGS@
 LIBS = 
 MOC = @MOC@
 
@@ -82,7 +82,7 @@ nodist_soundpanel_SOURCES = moc_soundpanel.cpp moc_edit_button.cpp\
                             moc_stereometer.cpp moc_cdplayer.cpp\
                             moc_cddblookup.cpp
 
-soundpanel_LDADD = -lQtGui -lQt3Support -lhpi -lid3 @FLAC_LIBS@ @LIBVORBIS@
+soundpanel_LDADD = -lQtGui -lQt3Support -lhpi -lid3 @FLAC_LIBS@ @LIBVORBIS@ @QT4_LIBS@
 
 rpm:	dist
 	cp soundpanel-$(VERSION).tar.gz $(RPM_ROOT)/SOURCES/

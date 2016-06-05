@@ -2,9 +2,7 @@
 //
 //   A class for playing Microsoft WAV files.
 //
-//   (C) Copyright 2002-2007 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: playstream.cpp,v 1.3 2012/09/10 11:57:29 cvs Exp $
+//   (C) Copyright 2002-2007,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License version 2 as
@@ -29,8 +27,8 @@
 #include <syslog.h>
 #include <fcntl.h>
 
-#include <playstream.h>
-#include <soundcard.h>
+#include "playstream.h"
+#include "soundcard.h"
 
 #define PLAYSTREAM_USE_LOCAL_MUTEX
 
@@ -59,8 +57,7 @@ volatile static int stream_mutex[HPI_MAX_ADAPTERS][HPI_MAX_STREAMS]=
 #endif
 
 
-PlayStream::PlayStream(SoundCard *card,
-			       QWidget *parent,const char *name) 
+PlayStream::PlayStream(SoundCard *card,QWidget *parent,const char *name) 
   :QObject(parent,name),WaveFile()
 {  
   sound_card=card;

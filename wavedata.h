@@ -2,9 +2,7 @@
 //
 //   A Container Class for Audio Meta Data.
 //
-//   (C) Copyright 2002-2006 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: wavedata.h,v 1.2 2008/09/06 12:02:49 fredg Exp $
+//   (C) Copyright 2002-2006,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -24,7 +22,8 @@
 #ifndef WAVEDATA_H
 #define WAVEDATA_H
 
-#include <QtGui/QtGui>
+#include <QDateTime>
+#include <QString>
 
 class WaveData
 {

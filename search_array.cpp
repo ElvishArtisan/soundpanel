@@ -2,7 +2,7 @@
 //
 // Get a Search String.
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -21,8 +21,10 @@
 
 #include <stdlib.h>
 
-#include <search_array.h>
+#include <QLabel>
+#include <QPushButton>
 
+#include "search_array.h"
 
 SearchArray::SearchArray(QString *search,QWidget *parent,const char *name)
   : QDialog(parent,name,true)

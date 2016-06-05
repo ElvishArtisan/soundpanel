@@ -2,7 +2,7 @@
 //
 // Global Variables for SoundPanel.
 //
-//   (C) Copyright 2003-2004 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2003-2004,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -19,11 +19,10 @@
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //
 
-
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-#include <QtGui/QtGui>
+#include <QString>
 
 extern QString array_file_filter;
 

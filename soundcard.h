@@ -2,9 +2,7 @@
 //
 //   Sound card subsystem for the HPI Library.
 //
-//   (C) Copyright 2002-2007 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: soundcard.h,v 1.3 2012/09/10 11:57:30 cvs Exp $
+//   (C) Copyright 2002-2007,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License version 2 as
@@ -19,16 +17,16 @@
 //   License along with this program; if not, write to the Free Software
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //
-//
 
 #ifndef SOUNDCARD_H
 #define SOUNDCARD_H
 
 #define METER_INTERVAL 20
 
-#include <QtGui/QtGui>
+#include <QObject>
+#include <QTimer>
 
-#include <information.h>
+#include "information.h"
 
 #include <asihpi/hpi.h>
 #ifndef HPI_VER

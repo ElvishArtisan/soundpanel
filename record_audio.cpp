@@ -2,7 +2,7 @@
 //
 // Record Audio to a SoundPanel button.
 //
-//   (C) Copyright 2002-2004 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2004,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -21,10 +21,10 @@
 
 #include <stdlib.h>
 
-#include <audiosettingsdialog.h>
-#include <record_audio.h>
-#include <globals.h>
-#include <conf.h>
+#include "audiosettingsdialog.h"
+#include "conf.h"
+#include "globals.h"
+#include "record_audio.h"
 
 RecordAudio::RecordAudio(QString *legend,QString *wavefile,
 			 QString *path,QString play_dev,QString rec_dev,

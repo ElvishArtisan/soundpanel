@@ -3,7 +3,7 @@
 // This implements a widget that represents a stereo audio level meter,
 // complete with labels and scale.
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //    $Id: playmeter.cpp,v 1.3 2008/09/19 22:45:53 fredg Exp $
 //
@@ -23,7 +23,9 @@
 
 #include <stdio.h>
 
-#include <playmeter.h>
+#include <QPainter>
+
+#include "playmeter.h"
 
 PlayMeter::PlayMeter(SegMeter::Orientation orient,QWidget *parent,const char *name)
   : QWidget(parent,name)

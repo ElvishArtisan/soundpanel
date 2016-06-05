@@ -2,7 +2,7 @@
 //
 // Edit SoundPanel Panel Name
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -22,7 +22,9 @@
 #ifndef PANEL_NAME_H
 #define PANEL_NAME_H
 
-#include <QtGui/QtGui>
+#include <QDialog>
+#include <QLineEdit>
+#include <QString>
 
 class PanelName : public QDialog
 {

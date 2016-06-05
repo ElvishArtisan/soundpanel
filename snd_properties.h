@@ -22,7 +22,8 @@
 #ifndef SND_PROPERTIES_H
 #define SND_PROPERTIES_H
 
-#include <QtGui/QtGui>
+#include <QDialog>
+#include <QLineEdit>
 
 class SndProperties : public QDialog
 {

@@ -2,9 +2,7 @@
 //
 //   A class for handling Microsoft WAV files.
 //
-//   (C) Copyright 2002-2004 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: wavefile.h,v 1.2 2008/09/06 12:02:49 fredg Exp $
+//   (C) Copyright 2002-2004,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -18,7 +16,6 @@
 //   You should have received a copy of the GNU General Public
 //   License along with this program; if not, write to the Free Software
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-//
 //
 
 #ifndef WAVEFILE_H
@@ -37,11 +34,8 @@
 #include <vorbis/vorbisenc.h>
 #endif  // HAVE_VORBIS
 
-#include <wavedata.h>
-#include <ringbuffer.h>
-
-using namespace std;
-
+#include "ringbuffer.h"
+#include "wavedata.h"
 
 //
 // Number of timers allowed in the CartChunk structure.
@@ -1165,7 +1159,7 @@ class WaveFile
    QString cutString(char *,unsigned,unsigned);
    QDate cutDate(char *,unsigned);
    QTime cutTime(char *,unsigned);
-   vector<unsigned short> energy_data;
+   std::vector<unsigned short> energy_data;
    bool energy_loaded;
    unsigned energy_ptr;
    int wave_id;

@@ -2,9 +2,7 @@
 //
 // Audio card selector widget for Rivendell
 //
-//   (C) Copyright 2002-2007 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: cardselector.cpp,v 1.2 2008/09/06 12:02:46 fredg Exp $
+//   (C) Copyright 2002-2007,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License version 2 as
@@ -20,9 +18,8 @@
 //   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 //
 
-#include <soundcard.h>
-#include <cardselector.h>
-
+#include "cardselector.h"
+#include "soundcard.h"
 
 CardSelector::CardSelector(QWidget *parent,const char *name)
   : QWidget(parent,name)

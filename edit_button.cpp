@@ -2,7 +2,7 @@
 //
 // Edit a SoundPanel Audio Button.
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License as
@@ -21,10 +21,10 @@
 
 #include <stdlib.h>
 
-#include <conf.h>
+#include "conf.h"
 
-#include <edit_button.h>
-#include <globals.h>
+#include "edit_button.h"
+#include "globals.h"
 
 EditButton::EditButton(QString *legend,QString *wavefile,
 		       QString *path,QColor *color,bool *cc,

@@ -2,9 +2,7 @@
 //
 // Abstract a Linux CDROM Device.
 //
-//   (C) Copyright 2002-2003 Fred Gleason <fredg@paravelsystems.com>
-//
-//    $Id: cdplayer.cpp,v 1.1 2007/12/19 20:22:23 fredg Exp $
+//   (C) Copyright 2002-2003,2016 Fred Gleason <fredg@paravelsystems.com>
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU Library General Public License 
@@ -26,8 +24,8 @@
 #include <sys/ioctl.h>
 #include <fcntl.h>
 #include <linux/cdrom.h>
-#include <cdplayer.h>
 
+#include "cdplayer.h"
 
 CdPlayer::CdPlayer(QWidget *parent,const char *name)
   : QObject(parent,name)
