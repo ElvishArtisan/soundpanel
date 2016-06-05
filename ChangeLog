@@ -128,23 +128,23 @@
 2003-07-28 Fred Gleason <fredg@salemradiolabs.com>
 	* Added code to 'about.cpp' to handle fonts properly under SuSE
 	8.2.
-	* Added code to 'edit_button.cpp' to handle fonts properly under 
+	* Added code to 'edit_button.cpp' to handle fonts properly under
 	SuSE 8.2.
-	* Added code to 'edit_devices.cpp' to handle fonts properly under 
+	* Added code to 'edit_devices.cpp' to handle fonts properly under
 	SuSE 8.2.
-	* Added code to 'edit_editor.cpp' to handle fonts properly under 
+	* Added code to 'edit_editor.cpp' to handle fonts properly under
 	SuSE 8.2.
-	* Added code to 'edit_ripper.cpp' to handle fonts properly under 
+	* Added code to 'edit_ripper.cpp' to handle fonts properly under
 	SuSE 8.2.
-	* Added code to 'panel_name.cpp' to handle fonts properly under 
+	* Added code to 'panel_name.cpp' to handle fonts properly under
 	SuSE 8.2.
-	* Added code to 'record_audio.cpp' to handle fonts properly under 
+	* Added code to 'record_audio.cpp' to handle fonts properly under
 	SuSE 8.2.
-	* Added code to 'ripper_dialog.cpp' to handle fonts properly under 
+	* Added code to 'ripper_dialog.cpp' to handle fonts properly under
 	SuSE 8.2.
-	* Added code to 'search_array.cpp' to handle fonts properly under 
+	* Added code to 'search_array.cpp' to handle fonts properly under
 	SuSE 8.2.
-	* Added code to 'soundpanel.cpp' to handle fonts properly under 
+	* Added code to 'soundpanel.cpp' to handle fonts properly under
 	SuSE 8.2.
 2003-07-28 Fred Gleason <fredg@salemradiolabs.com>
 	* Added a 'FreeDB Server' field to the Ripper Configuration dialog
@@ -253,7 +253,7 @@
 	* Fixed a bug in 'soundpanel.cpp' that was causing the wrong input
 	mixer level settings to be used .
 	* Fixed a bug in 'soundpanel.cpp' that was causing playout to fail
-	if a previous playout attempt had failed due to an unsupported 
+	if a previous playout attempt had failed due to an unsupported
 	file format.
 	* Incremented the version to 0.4.0.
 2004-04-12 Fred Gleason <fredg@salemradiolabs.com>
@@ -263,25 +263,25 @@
 	* Added build support for 'librhpi'.
 	* Added a sanity check to 'ripper_dialog.cpp' to prevent the
 	dialog from being closed during an active rip.
-	* Added code to 'ripper_dialog.cpp' to enforce a fixed dialog box 
+	* Added code to 'ripper_dialog.cpp' to enforce a fixed dialog box
 	size.
-	* Added code to 'edit_general.cpp' to enforce a fixed dialog box 
+	* Added code to 'edit_general.cpp' to enforce a fixed dialog box
 	size.
-	* Added code to 'edit_devices.cpp' to enforce a fixed dialog box 
+	* Added code to 'edit_devices.cpp' to enforce a fixed dialog box
 	size.
-	* Added code to 'edit_editor.cpp' to enforce a fixed dialog box 
+	* Added code to 'edit_editor.cpp' to enforce a fixed dialog box
 	size.
-	* Added code to 'edit_ripper.cpp' to enforce a fixed dialog box 
+	* Added code to 'edit_ripper.cpp' to enforce a fixed dialog box
 	size.
-	* Added code to 'edit_button.cpp' to enforce a fixed dialog box 
+	* Added code to 'edit_button.cpp' to enforce a fixed dialog box
 	size.
-	* Added code to 'about.cpp' to enforce a fixed dialog box 
+	* Added code to 'about.cpp' to enforce a fixed dialog box
 	size.
-	* Added code to 'record_audio.cpp' to enforce a fixed dialog box 
+	* Added code to 'record_audio.cpp' to enforce a fixed dialog box
 	size.
-	* Added code to 'search_array.cpp' to enforce a fixed dialog box 
+	* Added code to 'search_array.cpp' to enforce a fixed dialog box
 	size.
-	* Added code to 'snd_properties.cpp' to enforce a fixed dialog box 
+	* Added code to 'snd_properties.cpp' to enforce a fixed dialog box
 	size.
 2004-08-27 Fred Gleason <fredg@salemradiolabs.com>
 	* Removed 'RSound' from the link list in 'Makefile.am'.
@@ -320,7 +320,7 @@
 2004-12-17 Fred Gleason <fredg@salemradiolabs.com>
 	* Incremented the package version to 0.8.1.
 2005-02-10 Fred Gleason <fredg@salemradiolabs.com>
-	* Removed the messagebox warning about incorrect input port type 
+	* Removed the messagebox warning about incorrect input port type
 	in 'soundpanel.cpp'.
 2005-10-31 Fred Gleason <fredg@salemradiolabs.com>
 	* Added icons in 'soundpanel-16x16.xpm', 'soundpanel-22x22.xpm',
